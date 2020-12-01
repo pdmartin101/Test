@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FileLogger\FileLogger.cs" />
+    <Compile Remove="FileLogger\FileLoggerFactoryExtensions.cs" />
+    <Compile Remove="FileLogger\FileLoggerOptions.cs" />
+    <Compile Remove="FileLogger\FileLoggerProcessor.cs" />
+    <Compile Remove="FileLogger\FileLoggerProvider.cs" />
+    <Compile Remove="FileLogger\LogMessageEntry2.cs" />
+    <Compile Remove="PdmLogger.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="FileLogger\FileLogger.cs" />
+    <None Include="FileLogger\FileLoggerFactoryExtensions.cs" />
+    <None Include="FileLogger\FileLoggerOptions.cs" />
+    <None Include="FileLogger\FileLoggerProcessor.cs" />
+    <None Include="FileLogger\FileLoggerProvider.cs" />
+    <None Include="FileLogger\LogMessageEntry2.cs" />
+    <None Include="PdmLogger.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Libs\General\PdmBase\PdmBase\PdmBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
